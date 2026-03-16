@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="../IMG/javascript.webp" width="100" class="me-2"><span>JAVASCRIPT</span>
+                </a>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main Page -->
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">MAIN</a>
+                        </li>
+
+                        <!-- Lab A -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                LAB A
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="Lab_1A.html">A-1</a></li>
+                                <li><a class="dropdown-item" href="Lab_2A.html">A-2</a></li>
+                                <li><a class="dropdown-item" href="Lab_3A.html">A-3</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Lab B -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                LAB B
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Lab_1B.html">B-1</a></li>
+                                <li><a class="dropdown-item" href="Lab_2B.html">B-2</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Lab C -->
+                        <li class="nav-item"><a class="nav-link" href="Lab_C.html">LAB C</a>
+                        </li>
+
+                        <!-- Report -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                REPORT
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../REPORT/Report_Lab_1A.pdf" target="_blank">LAB
+                                        A-1</a></li>
+                                <li><a class="dropdown-item" href="../REPORT/Report_Lab_2A.pdf" target="_blank">LAB
+                                        A-2</a></li>
+                                <li><a class="dropdown-item" href="../REPORT/Report_Lab_B.pdf" target="_blank">LAB B</a>
+                                </li>
+                                <li><a class="dropdown-item" href="../REPORT/Report_Lab_C.pdf" target="_blank">LAB C</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Lab Content -->
+    <div class="container mt-4">
+
+        <header>
+            <h1 class="text-center">Lab 1A: JavaScript Fundamentals</h1>
+            <p class="text-center">Variables, Data Types, and Operators</p>
+        </header>
+
+        <section class="lab-card" style="border:2px solid #27ae60; padding:15px; border-radius:8px">
+            <h2>Steps 1 - 3: Logic & Console</h2>
+            <p>Open the <strong>Browser Console</strong> (F12 > Console) to see the output.</p>
+            <button class="btn btn-primary" onclick="runConsoleTasks()">Run Console Tasks</button>
+            <p class="mt-2">This logs Course Name, Student Count, and Data Types.</p>
+            <hr>
+            <h2>Step 4: Simple UI Output</h2>
+            <p>Test the <code>prompt()</code>, <code>alert()</code>, and <code>confirm()</code>.</p>
+            <button class="btn btn-warning" onclick="runInteraction()">Start Interaction</button>
+            <hr>
+            <h2 class="text-success">Final Task: POS Script</h2>
+            <p>Price per Item: <strong>RM 15.00</strong></p>
+            <p>Tax Rate: <strong>6%</strong></p>
+
+            <button class="btn btn-success" onclick="runPOS()">Checkout Now</button>
+
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        © 2026 JAVASCRIPT | 10DIT25F1038_SITI NUR SYIFFA BALQIS
+    </footer>
+
+    <script>
+
+        function runConsoleTasks() {
+
+            const courseName = "Web Design Technology";
+            let studentCount = 30;
+            let isLabFinished = false;
+
+            console.log("--- Step 1: Variables ---");
+            console.log("Course:", courseName);
+            console.log("Initial Students:", studentCount);
+
+            let x = 10;
+            let y = 3;
+
+            console.log("--- Step 2: Arithmetic ---");
+            console.log("Addition (10+3):", x + y);
+            console.log("Remainder (10%3):", x % y);
+
+            console.log("--- Step 3: Data Types ---");
+            console.log("Type of courseName:", typeof courseName);
+            console.log("Type of studentCount:", typeof studentCount);
+            console.log("Type of isLabFinished:", typeof isLabFinished);
+
+            alert("Check the console (F12)");
+
+        }
+
+        function runInteraction() {
+
+            let username = prompt("What is your name?");
+
+            if (username) {
+
+                alert("Welcome to JS Lab, " + username + "!");
+
+                let proceed = confirm("Do you want to start the lab?");
+                console.log("User wants to proceed:", proceed);
+
+            }
+
+        }
+
+        function runPOS() {
+
+            const pricePerItem = 15;
+            const taxRate = 0.06;
+
+            let quantity = prompt("How many items do you want to buy?");
+
+            if (quantity !== null && quantity !== "") {
+
+                let qtyNumber = parseInt(quantity);
+
+                if (!isNaN(qtyNumber) && qtyNumber > 0) {
+
+                    let subtotal = pricePerItem * qtyNumber;
+                    let totalTax = subtotal * taxRate;
+                    let finalBill = subtotal + totalTax;
+
+                    alert(
+                        "Order Summary\n\n" +
+                        "Quantity: " + qtyNumber + "\n" +
+                        "Subtotal: RM " + subtotal.toFixed(2) + "\n" +
+                        "Tax (6%): RM " + totalTax.toFixed(2) + "\n\n" +
+                        "Total: RM " + finalBill.toFixed(2)
+                    );
+
+                } else {
+                    alert("Invalid input");
+                }
+
+            }
+
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

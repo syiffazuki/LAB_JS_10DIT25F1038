@@ -1,0 +1,74 @@
+/* Page background */
+body {
+    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand span {
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+/* Navbar hover effect */
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+    transform: scale(1.05);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Page title */
+h1 {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Card hover animation */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Card title */
+.card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Button styling */
+.btn-success {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
